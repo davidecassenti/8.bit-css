@@ -1,0 +1,9 @@
+@use "sass:color";
+
+@import 'all';
+
+:root {
+  --root-primary-background-color: deepskyblue;
+  --root-primary-background-color-transparent: #{color.adjust(deepskyblue, $alpha: -0.9)};
+  --root-primary-color: #000;
+}

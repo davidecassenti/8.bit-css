@@ -1,0 +1,10 @@
+@use "sass:color";
+
+@import 'all';
+
+:root {
+  --root-primary-background-color: #c00;
+  --root-primary-background-color-transparent: #{color.adjust(#c00, $alpha: -0.8)};
+  --root-primary-color: white;
+  --link-color: #f00;
+}

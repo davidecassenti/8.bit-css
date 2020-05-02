@@ -1,0 +1,66 @@
+@use "sass:map";
+
+$device: (
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1600
+);
+
+$device-container: (
+  xs: 90vw,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1280px
+);
+
+@each $size in xs, sm, md, lg, xl {
+  @media screen and (min-width: map.get($device, $size)) {
+    main {
+      max-width: map.get($device-container, $size);
+    }
+  }
+}
+
+@media screen and (max-width: map.get($device, sm)) {
+  :root {
+    --h1-font-size: 2.25em;
+    --h2-font-size: 2em;
+    --h3-font-size: 1.75em;
+    --h4-font-size: 1.5em;
+    --h5-font-size: 1.25em;
+    --h6-font-size: 1.125em;
+  }
+}
+
+@media screen and (max-width: map.get($device, md)) {
+  button {
+    display: block;
+    width: 100%;
+    margin: 0 0 0.5em 0;
+  }
+
+  body > aside,
+  body > header {
+    position: static;
+  }
+
+  body > aside {
+    width: auto;
+    border: 0;
+    height: auto;
+    padding: 0.5em;
+    border-top: 0.125em solid var(--root-primary-background-color);
+    border-bottom: 0.125em solid var(--root-primary-background-color);
+    transform: none;
+    animation: none;
+    min-height: 0;
+
+    &:hover {
+      height: auto;
+      transform: none;
+    }
+  }
+}

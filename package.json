@@ -1,0 +1,20 @@
+{
+  "name": "@davidecassenti/8.bit-css",
+  "version": "1.0.0",
+  "description": "A minimal CSS framework that uses no classes to style the HTML elements.",
+  "main": "css/8.bit-green.css",
+  "scripts": {
+    "start": "npm run build:js && sass src/scss/:public/css/ --embed-source-map --watch",
+    "build": "npm run build:js && sass src/scss/:public/css/ --no-source-map",
+    "build:js": "terser src/js/8.bit-tv.js -c -m -o public/js/8.bit-tv.min.js"
+  },
+  "author": {
+    "name": "Davide Cassenti",
+    "url": "https://davide.cassenti.it"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.26.5",
+    "terser": "^4.6.13"
+  }
+}

@@ -1,0 +1,9 @@
+@use "sass:color";
+
+@import 'all';
+
+:root {
+  --root-primary-background-color: gold;
+  --root-primary-background-color-transparent: #{color.adjust(gold, $alpha: -0.9)};
+  --root-primary-color: #000;
+}

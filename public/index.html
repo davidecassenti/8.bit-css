@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>8.bit CSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A minimal CSS framework that uses no classes to style the HTML elements.">
+
+  <script>
+    function showDialog() {
+      var dialog = document.querySelector('#dialog');
+      dialog.setAttribute('open', true);
+
+      setTimeout(() => {
+        dialog.removeAttribute('open');
+      }, 3000);
+    }
+
+    function changeTheme(filename) {
+      var link = document.querySelector('#css-8bit-style');
+
+      function replaceStylesheet() {
+        link.remove();
+        newLink.id = 'css-8bit-style';
+
+        newLink.removeEventListener('load', replaceStylesheet);
+      }
+
+      var newLink = document.createElement('link');
+      newLink.addEventListener('load', replaceStylesheet);
+      newLink.rel = 'stylesheet';
+      newLink.href = filename;
+      document.head.insertBefore(newLink, link);
+    }
+  </script>
+
+  <!-- 8.bit CSS - begin -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+  <link id="css-8bit-style" rel="stylesheet" href="css/8.bit-green.css">
+  <script id="js-8bit-tv" src="js/8.bit-tv.min.js"></script>
+  <style>
+    :root {
+      --font-family: 'Source Code Pro', monospace;
+    }
+  </style>
+  <!-- 8.bit CSS - end -->
+</head>
+<body>
+  <header>
+    <strong>8.bit CSS</strong>
+    Page header is <strong>sticky</strong>.
+    <button onClick="showDialog()">Show Dialog</button>
+    Theme:
+    <button onClick="changeTheme('css/8.bit-green.css')">Green</button>
+    <button onClick="changeTheme('css/8.bit-yellow.css')">Yellow</button>
+    <button onClick="changeTheme('css/8.bit-red.css')">Red</button>
+    <button onClick="changeTheme('css/8.bit-blue.css')">Blue</button>
+  </header>
+  <aside>This is the page aside content</aside>
+  <main>
+    <h1>8.bit CSS</h1>
+
+    <dialog id="dialog">
+      <p>This is just a dialog :)</p>
+    </dialog>
+
+    <p><mark>8.bit CSS</mark> is a minimal CSS framework that uses no classes to style the HTML elements. You just need to include a single CSS file, and the page will immediatly have a retro style.</p>
+
+    <hr />
+
+    <p>You can show a dialog by <a href="javascript:showDialog()">clicking here</a>.</p>
+    <p>In this demo page, the dialog will automatically close after 3 seconds.</p>
+
+    <hr/>
+
+    <p>
+      These are the available headings:
+    </p>
+
+    <h1>An h1 heading</h1>
+    <h2>An h2 heading</h2>
+    <h3>An h3 heading</h3>
+    <h4>An h4 heading</h4>
+    <h5>An h5 heading</h5>
+    <h6>An h6 heading</h6>
+
+    <hr />
+
+    <p>
+      These are <strong>strong</strong>, <em>emphasis</em>, <code>code</code>, <mark>mark</mark>, <q>q (quote)</q> and <cite>cite</cite> examples.
+    </p>
+
+    <p>And these are a <a href="#top">relative link</a> and an <a href="https://davide.cassenti.it">absolute link</a>.</p>
+
+    <p>
+      Below, a blockquote example:
+    </p>
+
+    <blockquote>
+      Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </blockquote>
+
+    <p>And some preformatted text:</p>
+
+    <pre><code>function main() {
+  return 'hello, world!'
+}</code></pre>
+
+    <hr />
+
+    <p>
+      This is an ordered list:
+      <ol>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+      </ol>
+    </p>
+
+    <p>
+      This is an unordered list:
+      <ul>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+      </ul>
+    </p>
+
+    <hr />
+
+    <p>Best way to use images is by wrapping them with the <code>&lt;figure&gt;</code> tag. This will add the animated caption.</p>
+    <p>If you import the <code>8.bit-tv.js</code> file, these images will have an old-TV-static noise effect too.</p>
+    <p>In any case, images are always responsive:</p>
+    <p>
+      <figure>
+        <img alt="Pizza" src="img/pizza.jpg" />
+        <figcaption>
+          <p><q cite="https://en.wikipedia.org/wiki/Pizza"><strong>Pizza</strong> (Italian: [ˈpittsa], Neapolitan: [ˈpittsə]) is a savory dish of Italian origin,
+            consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese,
+            and often various other ingredients (anchovies, olives, meat, etc.) baked at a high temperature,
+            traditionally in a wood-fired oven.[1] A small pizza is sometimes called a pizzetta.</q></p>
+          <p><cite>From Wikipedia, the free encyclopedia</cite></p>
+        </figcaption>
+      </figure>
+    </p>
+
+    <hr />
+
+    <p>Tables:</p>
+
+    <p>
+      <table>
+        <caption>This is just a table caption</caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Name 1</td>
+            <td>Lorem ipsum dolor sit amet</td>
+          </tr>
+          <tr>
+            <td>Name 2</td>
+            <td>consectetur adipisci elit</td>
+          </tr>
+          <tr>
+            <td>Name 3</td>
+            <td>sed do eiusmod tempor incidunt</td>
+          </tr>
+          <tr>
+            <td>Name 4</td>
+            <td>ut labore et dolore magna aliqua</td>
+          </tr>
+        </tbody>
+      </table>
+    </p>
+
+    <hr />
+
+    <p>Forms:</p>
+
+    <form onsubmit="return false;">
+      <fieldset>
+        <legend>A simple form</legend>
+
+        <p>
+          <label for="input">Input</label>
+          <input id="input" placeholder="Write your name" />
+        </p>
+
+        <p>
+          <label for="email">Email <small>here you can see the error handling too</small></label>
+          <input id="email" type="email" placeholder="Write your email" />
+        </p>
+
+        <p>
+          <label for="range">Range</label>
+          <input id="range" type="range" step="1" min="0" max="9" />
+        </p>
+
+        <p>
+          <label for="textarea">Textarea</label>
+          <textarea id="textarea" placeholder="Write your name"></textarea>
+        </p>
+
+        <p>
+          <label for="select">Select</label>
+          <select id="select">
+            <optgroup label="Choose">
+              <option>Developer</option>
+              <option>Designer</option>
+            </optgroup>
+          </select>
+        </p>
+
+        <p>
+          <label for="input_checkbox_1">
+            <input type="checkbox" id="input_checkbox_1" />
+            Checkbox 1
+          </label>
+
+          <label for="input_checkbox_2">
+            <input type="checkbox" id="input_checkbox_2" />
+            Checkbox 2
+          </label>
+
+          <label for="input_checkbox_3">
+            <input type="checkbox" id="input_checkbox_3" />
+            Checkbox 3
+          </label>
+        </p>
+
+        <p>
+          <label for="input_radio_1">
+            <input name="radio" type="radio" id="input_radio_1" value="1" />
+            Radio 1
+          </label>
+
+          <label for="input_radio_2">
+            <input name="radio" type="radio" id="input_radio_2" value="2" />
+            Radio 2
+          </label>
+
+          <label for="input_radio_3">
+            <input name="radio" type="radio" id="input_radio_3" value="3" />
+            Radio 3
+          </label>
+        </p>
+
+        <p><button type="submit">Submit</button><button type="reset">Reset</button><button>Button</button></p>
+        <p><button disabled type="submit">Submit disabled</button><button disabled type="reset">Reset disabled</button><button disabled>Button disabled</button></p>
+      </fieldset>
+    </form>
+  </main>
+  <footer>
+    Created by <a href="https://davide.cassenti.it">Davide Cassenti</a>.
+  </footer>
+</body>
+</html>

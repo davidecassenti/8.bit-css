@@ -1,0 +1,239 @@
+@use "sass:color";
+
+:root {
+  --root-font-size: 16px;
+  --root-background-color: black;
+  --root-color: white;
+  --root-primary-background-color: green;
+  --root-primary-color: white;
+  --root-reset-background-color: #333;
+  --root-reset-color: white;
+  --root-primary-background-color-transparent: #{color.adjust(green, $alpha: -0.8)};
+  --root-error-color: red;
+
+  --font-family: monospace;
+  --font-size-xl: 1.5em;
+  --font-size-lg: 1.25em;
+  --font-size-md: 1em;
+  --font-size-sm: 0.875em;
+  --font-size-xs: 0.75em;
+  --font-weight-normal: 300;
+  --font-weight-bold: 600;
+
+  --border-color: #444;
+
+  --focus-element-box-shadow: 0 -8px 0 -4px var(--button-background-color);
+  --focus-element-active-box-shadow: 0 -8px 0 -4px var(--button-primary-background-color);
+  --focus-element-error-box-shadow: 0 -8px 0 -4px var(--root-error-color);
+
+
+  //
+  // typography
+  //
+
+  // selection
+  --selection-background-color: var(--root-primary-background-color);
+  --selection-color: var(--root-primary-color);
+
+  // h1..h6
+  --h1-font-size: 4em;
+  --h1-font-weight: var(--font-weight-bold);
+
+  --h2-font-size: 3em;
+  --h2-font-weight: var(--font-weight-bold);
+
+  --h3-font-size: 2.5em;
+  --h3-font-weight: var(--font-weight-bold);
+
+  --h4-font-size: 2em;
+  --h4-font-weight: var(--font-weight-bold);
+
+  --h5-font-size: 1.75em;
+  --h5-font-weight: var(--font-weight-bold);
+
+  --h6-font-size: 1.5em;
+  --h6-font-weight: var(--font-weight-bold);
+
+  // paragraphs
+  --p-padding: 0.5em 0;
+
+  // strong
+  --strong-background-color: inherit;
+  --strong-color: inherit;
+  --strong-font-weight: var(--font-weight-bold);
+  --strong-font-style: normal;
+  --strong-padding: 0;
+
+  // em
+  --em-background-color: inherit;
+  --em-color: inherit;
+  --em-font-weight: var(--font-weight-normal);
+  --em-font-style: italic;
+  --em-padding: 0;
+
+  // code
+  --code-background-color: #444;
+  --code-color: white;
+  --code-font-weight: var(--font-weight-normal);
+  --code-font-style: normal;
+  --code-padding: 0 0.25em;
+
+  // mark
+  --mark-background-color: var(--root-primary-background-color);
+  --mark-color: var(--root-primary-color);
+  --mark-font-weight: var(--font-weight-normal);
+  --mark-font-style: normal;
+  --mark-padding: 0 0.25em;
+
+  // q
+  --q-background-color: inherit;
+  --q-color: inherit;
+  --q-font-weight: var(--font-weight-normal);
+  --q-font-style: normal;
+  --q-padding: 0;
+  --q-before: '“';
+  --q-after: '„';
+
+  // cite
+  --cite-background-color: inherit;
+  --cite-color: inherit;
+  --cite-font-weight: var(--font-weight-normal);
+  --cite-font-style: normal;
+  --cite-padding: 0 0.25em;
+
+  // links
+  --link-background-color: transparent
+  --link-color: var(--root-primary-background-color);
+  --link-font-weight: var(--font-weight-normal);
+  --link-font-style: normal;
+  --link-padding: 0;
+
+  // code block
+  --code-block-font-size: var(--font-size-md);
+
+  // blockquote
+  --blockquote-background-color: var(--root-background-color);
+  --blockquote-color: #ccc;
+
+
+  //
+  // images
+  //
+  --figure-border-radius: 0;
+  --figure-caption-background-color: rgba(0, 0, 0, 0.7);
+  --figure-caption-color: white;
+
+  //
+  // header, footer, aside
+  //
+
+  // header
+  --header-background-color: var(--root-background-color);
+  --header-color: var(--root-color);
+  --hader-border: 0;
+
+  // footer
+  --footer-background-color: var(--root-reset-background-color);
+  --footer-color: var(--root-reset-color);
+  --footer-border: 0.25em solid var(--root-primary-background-color);
+
+  // aside
+  --aside-background-color: var(--root-background-color);
+  --aside-color: var(--root-color);
+  --aside-border: 0.5em solid var(--root-primary-background-color);
+
+
+  //
+  // buttons
+  //
+
+  // all buttons
+  --button-background-color: #ddd;
+  --button-color: black;
+  --button-border: none;
+  --button-font-size: var(--font-size-md);
+  --button-padding: 0.5em 1em;
+  --button-margin: 0 0.25em 0.25em 0;
+  --button-focus-shadow: var(--focus-element-active-box-shadow);
+
+  // primary and reset buttons
+  --button-primary-background-color: var(--root-primary-background-color);
+  --button-primary-color: var(--root-primary-color);
+  --button-primary-focus-shadow: var(--focus-element-box-shadow);
+
+  --button-reset-background-color: var(--root-reset-background-color);
+  --button-reset-color: var(--root-reset-color);
+  --button-reset-focus-shadow: var(--focus-element-active-box-shadow);
+
+
+  //
+  // forms
+  //
+
+  // input
+  --form-input-font-size: var(--font-size-md);
+  --form-input-font-weight: var(--font-weight-normal);
+  --form-input-focus-shadow: var(--focus-element-active-box-shadow);
+  --form-input-invalid-focus-shadow: var(--focus-element-error-box-shadow);
+  --form-input-invalid-error-color: var(--root-error-color);
+
+  // textarea
+  --form-textarea-height: 6em;
+
+  // select
+  --form-select-background-color: var(--root-primary-background-color);
+  --form-select-color: var(--root-primary-color);
+  --form-select-font-size: var(--font-size-md);
+  --form-select-font-weight: var(--font-weight-bold);
+  --form-select-focus-shadow: var(--focus-element-box-shadow);
+
+  // checkbox
+  --form-checkbox-background-color: var(--root-color);
+  --form-checkbox-unchecked-color: #aaa;
+  --form-checkbox-checked-color: var(--root-primary-background-color);
+  --form-checkbox-focus-shadow: var(--focus-element-active-box-shadow);
+
+  // radio
+  --form-radio-background-color: var(--root-color);
+  --form-radio-checked-color: var(--root-primary-background-color);
+  --form-radio-focus-shadow: var(--focus-element-active-box-shadow);
+
+  // range
+  --form-range-slider-color: var(--root-color);
+  --form-range-thumb-color: var(--root-primary-background-color);
+  --form-range-focus-shadow: var(--focus-element-box-shadow);
+
+
+  //
+  // lists
+  //
+
+  --list-li-background-color: var(--root-primary-background-color);
+  --list-li-color: var(--root-primary-color);
+
+
+  //
+  // tables
+  //
+
+  // header
+  --table-header-background-color: var(--root-primary-background-color);
+  --table-header-color: var(--root-primary-color);
+  --table-header-font-size: var(--font-size-md);
+  --table-header-font-weight: var(--font-weight-normal);
+  --table-header-text-align: left;
+
+  // cells
+  --table-cell-background-color-odd: #000;
+  --table-cell-color-odd: #fff;
+  --table-cell-background-color-even: #222;
+  --table-cell-color-even: #fff;
+  --table-cell-text-align: left;
+
+
+  //
+  // dialog
+  //
+  --dialog-background-color: white;
+  --dialog-color: black;
+}

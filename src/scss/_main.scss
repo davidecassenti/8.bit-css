@@ -1,0 +1,114 @@
+html,
+body {
+  background-color: var(--root-background-color);
+  color: var(--root-color);
+  font-family: var(--font-family);
+  font-size: var(--root-font-size);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+  padding: 0;
+}
+
+body {
+  background-image:
+    linear-gradient(
+      var(--root-primary-background-color-transparent) 0,
+      var(--root-primary-background-color-transparent) 4em,
+      transparent 4em,
+    ),
+    linear-gradient(
+      var(--root-primary-background-color-transparent) 0,
+      var(--root-primary-background-color-transparent) 4em,
+      transparent 4em,
+    ),
+    linear-gradient(
+      var(--root-primary-background-color-transparent) 0,
+      var(--root-primary-background-color-transparent) 4em,
+      transparent 4em,
+    ),
+    linear-gradient(
+      var(--root-primary-background-color-transparent) 0,
+      var(--root-primary-background-color-transparent) 4em,
+      transparent 4em,
+    ),
+    linear-gradient(
+      var(--root-primary-background-color-transparent) 0,
+      var(--root-primary-background-color-transparent) 4em,
+      transparent 4em,
+    )
+  ;
+  background-size: 4em 32em;
+  background-repeat: repeat-y;
+  background-position: 4em 8em, 24em 20em, 48em 4em, 64em 16em, 80em 0em;
+
+  animation-name: blinky-background;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1);
+
+
+  & > header {
+    background-color: var(--header-background-color);
+    color: var(--header-color);
+    border-bottom: var(--header-border);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  & > footer {
+    background-color: var(--footer-background-color);
+    color: var(--footer-color);
+    border-top: var(--footer-border);
+    text-align: center;
+  }
+
+  & > aside {
+    position: fixed;
+    top: 0;
+    left: 0.5em;
+
+    border-bottom: var(--aside-border);
+
+    animation-name: aside-iamhere;
+    animation-duration: 0.5s;
+
+    background-color: var(--aside-background-color);
+    color: var(--aside-color);
+
+    box-shadow:
+      0.25em 0 0.5em 0 rgba(150, 150, 150, 0.3),
+      -0.25em 0 0.5em 0 rgba(150, 150, 150, 0.3),
+      0 0.25em 0.5em 0 rgba(150, 150, 150, 0.3)
+    ;
+    overflow: auto;
+    width: 20em;
+    min-height: 8em;
+    padding: 1em 0.5em;
+    z-index: 10;
+    box-sizing: border-box;
+
+    transform: translateY(calc(-100% + 1em));
+    transition-property: transform;
+    transition-duration: 0.5s, 0s;
+    transition-delay: 0s, 0.5s;
+    transition-timing-function: steps(4);
+
+    &:hover {
+      transform: translateY(0);
+      transition-delay: 0s, 0s;
+    }
+  }
+
+  & > main {
+    padding-bottom: 2em;
+    overflow: auto;
+    margin: 0 auto;
+  }
+}
+
+header,
+footer {
+  padding: 1em;
+}

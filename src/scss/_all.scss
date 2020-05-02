@@ -1,0 +1,18 @@
+// reset the CSS
+@import 'reset';
+
+// import mixins and variables
+@import 'mixins';
+@import 'variables';
+
+// import animations and styles
+@import 'animations';
+@import 'main';
+@import 'lists';
+@import 'typography';
+@import 'buttons';
+@import 'table';
+@import 'forms';
+
+// import media rules
+@import 'media';

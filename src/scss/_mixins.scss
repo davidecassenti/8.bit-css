@@ -1,0 +1,59 @@
+@mixin animation-cathodic() {
+  animation-name: cathodic-blinking;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+@mixin animation-horizontal-signal {
+  animation-name: horizontal-signal;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+  background-size: 100% 0.25em;
+  background-repeat: repeat-x;
+  background-image:
+    linear-gradient(
+      transparent 0,
+      rgba(0, 0, 0, 0.1) 0.125em,
+      transparent 0.25em
+    )
+  ;
+}
+
+@mixin animation-tv-static {
+  background-image: var(--tv-static-url);
+  background-repeat: repeat;
+  opacity: 0.15;
+
+  animation-name: tv-static;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@mixin overlay-image {
+  background-image:
+    linear-gradient(
+      -45deg,
+      rgba(0, 0, 0, 0.5) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.5) 75%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.5) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.5) 75%,
+      rgba(0, 0, 0, 0.5) 100%
+    )
+  ;
+  background-repeat: repeat;
+  background-size: 2px 2px;
+  background-position: 0 0, 1px 1px;
+}

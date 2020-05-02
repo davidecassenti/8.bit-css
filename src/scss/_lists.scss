@@ -1,0 +1,44 @@
+ul, ol {
+  padding-left: 1em;
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+ul {
+  li {
+    position: relative;
+    padding-left: 1em;
+  }
+
+  li:before {
+    content: '';
+    display: inline-block;
+    background-color: var(--list-li-background-color);
+    width: 0.5em;
+    height: 0.5em;
+    position: absolute;
+    top: 0.625em;
+    left: 0;
+  }
+}
+
+ol {
+  counter-reset: li;
+
+  li {
+    counter-increment: li;
+    margin: 0.5em 0;
+
+    &::before {
+      content: counter(li, upper-roman);
+      background-color: var(--list-li-background-color);
+      color: var(--list-li-color);
+      margin-right: 0.25em;
+      padding: 0.125em;
+    }
+  }
+}
+
+li {
+  margin-bottom: 0.5em;
+}

@@ -1,0 +1,43 @@
+// creates an animated background with floating pixels
+@keyframes blinky-background {
+  0% { background-position: 4em 8em, 24em 20em, 48em 4em, 64em 16em, 80em 0em; }
+  20% { background-position: 4em 16em, 24em 4em, 48em 32em, 64em 48em, 80em 8em; }
+  40% { background-position: 4em 4em, 24em 12em, 48em 12em, 64em 8em, 80em 16em; }
+  60% { background-position: 4em 24em, 24em 8em, 48em 8em, 64em 28em, 80em 4em; }
+  80% { background-position: 4em 12em, 24em 16em, 48em 16em, 64em 12em, 80em 24em; }
+  100% { background-position: 4em 8em, 24em 2em, 48em 12em, 64em 4em, 80em 16em; }
+}
+
+// used to add a blinking effect to the graphic elements
+@keyframes cathodic-blinking {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(2); }
+}
+
+// generates an horizontal noise signal
+@keyframes horizontal-signal {
+  0% { background-position: 0 0; }
+  30% { background-position: 0 40%; }
+  40% { background-position: 0 60%; }
+  50% { background-position: 0 50%; }
+  80% { background-position: 0 calc(100% + 0.25em); }
+  100% { background-position: 0 calc(100% + 0.25em); }
+}
+
+// updates the background position "randomly" to simulate the noise effect
+@keyframes tv-static {
+  0%   { background-position: 1em 12em; }
+  20%  { background-position: -3em 0; }
+  40%  { background-position: 6em -1em; }
+  60%  { background-position: 0 -8em; }
+  80%  { background-position: -6em -2em; }
+  100% { background-position: 10em -4em; }
+}
+
+// animate the aside dropdown to let the user know it is there
+@keyframes aside-iamhere {
+  0% { transform: translateY(calc(-100% + 1em)); }
+  40% { transform: translateY(calc(-100% + 2em)); }
+  60% { transform: translateY(calc(-100% + 0.5em)); }
+  80% { transform: translateY(calc(-100% + 1.5em)); }
+}
