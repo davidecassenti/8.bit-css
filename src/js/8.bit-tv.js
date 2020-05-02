@@ -16,7 +16,7 @@
     for (var r = 0; r < 100; r++) {
       for (var c = 0; c < 100; c++) {
         var col = Math.floor(Math.random() * 255);
-        ctx.fillStyle = `rgb(${col}, ${col}, ${col})`;
+        ctx.fillStyle = `rgba(${col}, ${col}, ${col}, 0.15)`;
         ctx.fillRect(r, c, 1, 1);
       }
     }

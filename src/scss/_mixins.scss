@@ -27,7 +27,7 @@
 @mixin animation-tv-static {
   background-image: var(--tv-static-url);
   background-repeat: repeat;
-  opacity: 0.15;
+  will-change: background-position;
 
   animation-name: tv-static;
   animation-duration: 0.5s;
