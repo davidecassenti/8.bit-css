@@ -1,7 +1,7 @@
 {
   "name": "@davidecassenti/8.bit-css",
   "version": "1.0.0",
-  "description": "A minimal CSS framework that uses no classes to style the HTML elements.",
+  "description": "A minimal CSS framework that uses no classes to give pages a retro look.",
   "main": "css/8.bit-green.css",
   "scripts": {
     "start": "npm run build:js && sass src/scss/:public/css/ --embed-source-map --watch",

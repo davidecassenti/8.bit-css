@@ -1,6 +1,6 @@
 # 8.bit CSS
 
-> A minimal CSS framework that uses no classes to style the HTML elements.
+> A minimal CSS framework that uses no classes to give pages a retro look.
 
 
 ## How to use
