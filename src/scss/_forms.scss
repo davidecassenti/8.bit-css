@@ -50,7 +50,7 @@ form {
   }
 
   textarea {
-    min-height: var(--form-textarea-width);
+    min-height: var(--form-textarea-height);
     width: 50%;
     width: -moz-available;          /* WebKit-based browsers will ignore this. */
     width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
