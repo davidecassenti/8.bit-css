@@ -102,7 +102,7 @@
   --cite-padding: 0 0.25em;
 
   // links
-  --link-background-color: transparent
+  --link-background-color: inherit;
   --link-color: var(--root-primary-background-color);
   --link-font-weight: var(--font-weight-normal);
   --link-font-style: normal;
