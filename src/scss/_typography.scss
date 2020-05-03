@@ -271,6 +271,19 @@ figure {
   position: relative;
   overflow: hidden;
   border-radius: var(--figure-border-radius);
+
+  &:after {
+    content: '';
+    background:
+      linear-gradient(transparent 0, rgba(0, 0, 0, 0.25) 1px) repeat top left / 2px 2px,
+      linear-gradient(90deg, transparent 0, rgba(0, 0, 0, 0.25) 1px) repeat top left / 2px 2px
+    ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 figcaption {
