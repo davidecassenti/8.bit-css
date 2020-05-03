@@ -299,7 +299,7 @@ figcaption {
   transform: translateY(100%);
   transition-property: transform;
   transition-duration: 0.5s;
-  transition-timing-function: steps(4);
+  transition-timing-function: steps(2);
 
   figure:hover & {
     transform: translateY(0);
@@ -328,7 +328,7 @@ dialog {
 
   transition-property: transform;
   transition-duration: 0.5s;
-  transition-timing-function: steps(4);
+  transition-timing-function: steps(2);
 
   &[open] {
     transform: translate3d(-50%, 0, 0);

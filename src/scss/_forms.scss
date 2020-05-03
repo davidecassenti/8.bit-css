@@ -13,6 +13,7 @@ form {
     display: block;
     font-weight: var(--font-weight-normal);
     margin-bottom: 0.5em;
+    line-height: normal;
   }
 
   input,
@@ -112,7 +113,7 @@ form {
     width: 3em;
     height: 1.5em;
     position: relative;
-    vertical-align: bottom;
+    vertical-align: middle;
 
     &:focus {
       box-shadow: var(--form-checkbox-focus-shadow);
@@ -151,21 +152,30 @@ form {
 
     background-color: var(--form-radio-background-color);
     border: 0;
-    width: 1em;
-    height: 1em;
+    width: 1.25em;
+    height: 1.25em;
     position: relative;
+    vertical-align: middle;
 
     &:focus {
       box-shadow: var(--form-radio-focus-shadow);
     }
 
-    &:checked:after {
+    &:after {
       content: '';
-      width: 0.5em;
-      height: 0.5em;
+      width: 0.75em;
+      height: 0.75em;
       left: 0.25em;
       top: 0.25em;
       position: absolute;
+      background-color: transparent;
+
+      transition-property: background-color;
+      transition-duration: 0.25s;
+      transition-timing-function: steps(2);
+    }
+
+    &:checked:after {
       background-color: var(--form-radio-checked-color);
     }
   }

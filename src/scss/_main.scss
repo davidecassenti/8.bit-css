@@ -93,7 +93,7 @@ body {
     transition-property: transform;
     transition-duration: 0.5s, 0s;
     transition-delay: 0s, 0.5s;
-    transition-timing-function: steps(4);
+    transition-timing-function: steps(2);
 
     &:hover {
       transform: translateY(0);

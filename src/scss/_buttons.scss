@@ -11,6 +11,7 @@ button {
 
   transition-property: filter;
   transition-duration: 0.5s;
+  transition-timing-function: steps(2);
 
   @include animation-horizontal-signal;
 
