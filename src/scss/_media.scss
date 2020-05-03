@@ -63,4 +63,11 @@ $device-container: (
       transform: none;
     }
   }
+
+  figcaption {
+    position: relative;
+    padding: 0 0.5em;
+    transform: translateY(0);
+    font-size: 0.875em;
+  }
 }
