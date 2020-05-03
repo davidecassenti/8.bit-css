@@ -21,11 +21,6 @@ In order to use **8.bit** CSS, you should just import the CSS file into the page
     <link rel="stylesheet" href="css/8.bit-green.css">
     ```
 
-3. (optional) Include `public/js/8.bit-tv.min.js` to enable the TV noise effect on the images:
-    ```html
-    <script src="js/8.bit-tv.min.js">
-    ```
-
 ## Customization
 
 **8.bit CSS** uses CSS variables, to make it easy to customize the theme. See the available CSS variables in the `src/scss/_variables.scss`.

@@ -4,9 +4,8 @@
   "description": "A minimal CSS framework that uses no classes to give pages a retro look.",
   "main": "css/8.bit-green.css",
   "scripts": {
-    "start": "npm run build:js && sass src/scss/:public/css/ --embed-source-map --watch",
-    "build": "npm run build:js && sass src/scss/:public/css/ --no-source-map --style=compressed",
-    "build:js": "terser src/js/8.bit-tv.js -c -m -o public/js/8.bit-tv.min.js"
+    "start": "sass src/scss/:public/css/ --embed-source-map --watch",
+    "build": "sass src/scss/:public/css/ --no-source-map --style=compressed"
   },
   "author": {
     "name": "Davide Cassenti",
