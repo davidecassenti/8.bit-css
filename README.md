@@ -5,7 +5,9 @@
 
 ## How to use
 
-In order to use **8.bit** CSS, you should just import the CSS file into the page. There are 4 available themes:
+In order to use **8.bit** CSS, you should just import the CSS file into the page. File(s) are stored under `public/css/`.
+
+There are 4 available themes:
 
 | Theme  | Filename                      |
 |--------|-------------------------------|
