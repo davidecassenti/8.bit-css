@@ -1,0 +1,10 @@
+@use "sass:color";
+
+@import 'all';
+
+:root {
+  --root-primary-background-color: deeppink;
+  --root-primary-background-color-transparent: #{color.adjust(deeppink, $alpha: -0.9)};
+  --root-primary-color: #fff;
+  --link-color: #{color.adjust(deeppink, $lightness: 10%)};
+}

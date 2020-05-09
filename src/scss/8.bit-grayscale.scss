@@ -1,0 +1,31 @@
+@use "sass:color";
+
+@import 'all';
+
+:root {
+  --root-background-color: white;
+  --root-color: black;
+  --root-error-color: #777;
+
+  --root-primary-background-color: black;
+  --root-primary-color: white;
+  --root-primary-background-color-transparent: #{color.adjust(black, $alpha: -0.8)};
+
+  --button-background-color: #666;
+  --button-color: #fff;
+
+  --form-input-border: 1px solid #aaa;
+  --form-checkbox-checked-color: white;
+  --form-radio-checked-color: white;
+
+  --blockquote-color: #444;
+
+  --table-cell-background-color-odd: #fff;
+  --table-cell-color-odd: #000;
+  --table-cell-background-color-even: #ddd;
+  --table-cell-color-even: #000;
+  --image-filter: grayscale(1);
+
+  --footer-background-color: #ddd;
+  --footer-color: black;
+}
