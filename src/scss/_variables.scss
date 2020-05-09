@@ -119,6 +119,7 @@
   //
   // images
   //
+  --image-filter: none;
   --figure-border-radius: 0;
   --figure-caption-background-color: rgba(0, 0, 0, 0.7);
   --figure-caption-color: white;
@@ -171,6 +172,7 @@
   //
 
   // input
+  --form-input-border: 0;
   --form-input-font-size: var(--font-size-md);
   --form-input-font-weight: var(--font-weight-normal);
   --form-input-focus-shadow: var(--focus-element-active-box-shadow);
@@ -199,6 +201,7 @@
   --form-radio-focus-shadow: var(--focus-element-active-box-shadow);
 
   // range
+  --form-input-border: 0;
   --form-range-slider-color: var(--root-color);
   --form-range-thumb-color: var(--root-primary-background-color);
   --form-range-focus-shadow: var(--focus-element-box-shadow);

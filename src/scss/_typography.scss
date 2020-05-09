@@ -265,6 +265,7 @@ hr {
 
 img {
   max-width: 100%;
+  filter: var(--image-filter);
 }
 
 figure {

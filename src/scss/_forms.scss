@@ -18,7 +18,7 @@ form {
 
   input,
   textarea {
-    border: 0;
+    border: var(--form-input-border);
     padding: 0.5em;
     font-family: var(--font-family);
     font-weight: var(--form-input-font-weight);
@@ -185,6 +185,7 @@ form {
     -webkit-appearance: none;
     appearance: none;
 
+    border: var(--form-range-border);
     background-color: transparent;
 
     &:hover:active::-webkit-slider-thumb {
