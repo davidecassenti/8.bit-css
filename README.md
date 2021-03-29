@@ -7,14 +7,17 @@
 
 In order to use **8.bit** CSS, you should just import the CSS file into the page. File(s) are stored under `public/css/`.
 
-There are 4 available themes:
+These are the available themes:
 
-| Theme  | Filename                      |
-|--------|-------------------------------|
-| green  | `public/css/8.bit-green.css`  |
-| yellow | `public/css/8.bit-yellow.css` |
-| red    | `public/css/8.bit-red.css`    |
-| blue   | `public/css/8.bit-blue.css`   |
+| Theme     | Filename                         |
+|-----------|----------------------------------|
+| all       | `public/css/8.bit.css`           | 
+| blue      | `public/css/8.bit-blue.css`      | 
+| grayscale | `public/css/8.bit-grayscale.css` | 
+| green     | `public/css/8.bit-green.css`     | 
+| pink      | `public/css/8.bit-pink.css`      | 
+| red       | `public/css/8.bit-red.css`       | 
+| yellow    | `public/css/8.bit-yellow.css`    |
 
 1. Get the appropriate file, based on the theme you want to use
 
@@ -22,6 +25,11 @@ There are 4 available themes:
     ```html
     <link rel="stylesheet" href="css/8.bit-green.css">
     ```
+
+## Main File (all themes)
+
+The file `8.bit.css` can be used to switch theme without loadind different files.
+To do so, you should add a CSS class to the `html` tag: `theme-8bit-[color]`.
 
 ## Customization
 

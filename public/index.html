@@ -15,27 +15,18 @@
       }, 3000);
     }
 
-    function changeTheme(filename) {
-      var link = document.querySelector('#css-8bit-style');
+    function changeTheme(color) {
+      var html = document.querySelector('html');
+      
+      for (var c of html.classList.values()) html.classList.remove(c);
 
-      function replaceStylesheet() {
-        link.remove();
-        newLink.id = 'css-8bit-style';
-
-        newLink.removeEventListener('load', replaceStylesheet);
-      }
-
-      var newLink = document.createElement('link');
-      newLink.addEventListener('load', replaceStylesheet);
-      newLink.rel = 'stylesheet';
-      newLink.href = filename;
-      document.head.insertBefore(newLink, link);
+      html.classList.add(`theme-8bit-${color}`);
     }
   </script>
 
   <!-- 8.bit CSS - begin -->
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
-  <link id="css-8bit-style" rel="stylesheet" href="css/8.bit-green.css">
+  <link id="css-8bit-style" rel="stylesheet" href="css/8.bit.css">
   <style>
     :root {
       --font-family: 'Source Code Pro', monospace;
@@ -49,12 +40,12 @@
     Page header is <strong>sticky</strong>.
     <button onClick="showDialog()">Show Dialog</button>
     Theme:
-    <button onClick="changeTheme('css/8.bit-green.css')">Green</button>
-    <button onClick="changeTheme('css/8.bit-yellow.css')">Yellow</button>
-    <button onClick="changeTheme('css/8.bit-red.css')">Red</button>
-    <button onClick="changeTheme('css/8.bit-blue.css')">Blue</button>
-    <button onClick="changeTheme('css/8.bit-pink.css')">Pink</button>
-    <button onClick="changeTheme('css/8.bit-grayscale.css')">Grayscale</button>
+    <button onClick="changeTheme('green')">Green</button>
+    <button onClick="changeTheme('yellow')">Yellow</button>
+    <button onClick="changeTheme('red')">Red</button>
+    <button onClick="changeTheme('blue')">Blue</button>
+    <button onClick="changeTheme('pink')">Pink</button>
+    <button onClick="changeTheme('grayscale')">Grayscale</button>
   </header>
   <aside>This is the page aside content</aside>
   <main>
