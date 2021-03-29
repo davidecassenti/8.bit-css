@@ -1,0 +1,70 @@
+@use "sass:color";
+
+@import 'all';
+
+:root {
+  --theme-8bit-blue: deepskyblue;
+  --theme-8bit-grayscale: white;
+  --theme-8bit-green: green;
+  --theme-8bit-pink: deeppink;
+  --theme-8bit-red: #c00;
+  --theme-8bit-yellow: gold;
+}
+
+html.theme-8bit-blue {
+  --root-primary-background-color: deepskyblue;
+  --root-primary-background-color-transparent: #{color.adjust(deepskyblue, $alpha: -0.9)};
+  --root-primary-color: #000;
+}
+
+html.theme-8bit-grayscale {
+  --root-background-color: white;
+  --root-color: black;
+  --root-error-color: #777;
+
+  --root-primary-background-color: black;
+  --root-primary-color: white;
+  --root-primary-background-color-transparent: #{color.adjust(black, $alpha: -0.8)};
+
+  --button-background-color: #666;
+  --button-color: #fff;
+
+  --form-input-border: 1px solid #aaa;
+  --form-checkbox-checked-color: white;
+  --form-radio-checked-color: white;
+
+  --blockquote-color: #444;
+
+  --table-cell-background-color-odd: #fff;
+  --table-cell-color-odd: #000;
+  --table-cell-background-color-even: #ddd;
+  --table-cell-color-even: #000;
+  --image-filter: grayscale(1);
+
+  --footer-background-color: #ddd;
+  --footer-color: black;
+}
+
+html.theme-8bit-green {
+  --link-color: lime;
+}
+
+html.theme-8bit-pink {
+  --root-primary-background-color: deeppink;
+  --root-primary-background-color-transparent: #{color.adjust(deeppink, $alpha: -0.9)};
+  --root-primary-color: #fff;
+  --link-color: #{color.adjust(deeppink, $lightness: 10%)};
+}
+
+html.theme-8bit-red {
+  --root-primary-background-color: #c00;
+  --root-primary-background-color-transparent: #{color.adjust(#c00, $alpha: -0.8)};
+  --root-primary-color: white;
+  --link-color: #f00;
+}
+
+html.theme-8bit-yellow {
+  --root-primary-background-color: gold;
+  --root-primary-background-color-transparent: #{color.adjust(gold, $alpha: -0.9)};
+  --root-primary-color: #000;
+}
