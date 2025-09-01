@@ -1,6 +1,6 @@
 {
   "name": "@davidecassenti/8.bit-css",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A minimal CSS framework that uses no classes to give pages a retro look.",
   "main": "css/8.bit-green.css",
   "scripts": {
@@ -18,6 +18,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.26.5"
+    "sass": "^1.91.0"
   }
 }

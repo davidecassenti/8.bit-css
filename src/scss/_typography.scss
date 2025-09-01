@@ -1,3 +1,5 @@
+@use 'mixins';
+
 *::selection {
   background-color: var(--selection-background-color);
   color: var(--selection-color);
@@ -24,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: repeat-x;
     margin-right: 0.25em;
 
-    @include animation-cathodic;
+    @include mixins.animation-cathodic;
   }
 }
 
@@ -132,7 +134,7 @@ cite {
     height: 0.5em;
     margin: 0 0.25em;
     display: inline-block;
-    @include animation-cathodic;
+    @include mixins.animation-cathodic;
   }
 }
 
@@ -159,7 +161,7 @@ a {
     width: 0.25em;
     height: 0.25em;
 
-    @include animation-cathodic;
+    @include mixins.animation-cathodic;
   }
 
   &:before {
@@ -188,7 +190,7 @@ a {
     border-bottom: 0.25em solid transparent;
     vertical-align: top;
 
-    @include animation-cathodic;
+    @include mixins.animation-cathodic;
   }
 }
 
@@ -208,7 +210,7 @@ pre {
     top: 0;
     bottom:0;
     border-left: 0.25em solid var(--root-primary-background-color);
-    @include animation-cathodic;
+    @include mixins.animation-cathodic;
   }
 
   code {
@@ -232,7 +234,7 @@ blockquote {
     top: 0;
     bottom:0;
     border-left: 0.25em solid var(--root-primary-background-color);
-    @include animation-cathodic;
+    @include mixins.animation-cathodic;
   }
 }
 
@@ -259,7 +261,7 @@ hr {
   height: 0.25em;
   margin: 1em 0;
 
-  @include animation-cathodic;
+  @include mixins.animation-cathodic;
 }
 
 
@@ -343,7 +345,7 @@ dialog {
     top: -0.25em;
     height: 0.5em;
     background-color: var(--root-primary-background-color);
-    @include animation-cathodic;
+    @include mixins.animation-cathodic;
   }
 
   &:after {
